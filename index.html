@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PlanEstudio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>PlanEstudio</h1>
+      <p>Organiza tu estudio en segundos, sin registro.</p>
+    </header>
+
+    <main>
+      <section class="form-section">
+        <h2>Configura tu plan</h2>
+
+        <div class="field">
+          <label for="hoursPerDay">Horas disponibles al día</label>
+          <input type="number" id="hoursPerDay" min="1" placeholder="Ej: 3" />
+        </div>
+
+        <div class="field">
+          <label for="daysToPlan">Días a planificar</label>
+          <input type="number" id="daysToPlan" min="1" placeholder="Ej: 7" />
+        </div>
+
+        <section class="subjects-section">
+          <h3>Asignaturas</h3>
+
+          <div id="subjectsContainer">
+            <div class="subject-card">
+              <input type="text" class="subject-name" placeholder="Nombre de la asignatura" />
+              <input type="number" class="subject-exam-days" min="1" placeholder="Días hasta el examen" />
+              <select class="subject-difficulty">
+                <option value="facil">Fácil</option>
+                <option value="media">Media</option>
+                <option value="dificil">Difícil</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="button" id="addSubjectBtn">+ Añadir asignatura</button>
+        </section>
+
+        <button type="button" id="generatePlanBtn">Generar plan</button>
+<button type="button" id="clearAllBtn">Limpiar todo</button>
+      </section>
+
+      <section class="result-section">
+        <h2>Tu plan de estudio</h2>
+        <div id="result">
+          <p>Aquí aparecerá tu plan personalizado.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
